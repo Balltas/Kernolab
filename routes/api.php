@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('create-transaction', 'Api\TransactionsController@createTransaction');
+Route::post('confirm-transaction', 'Api\TransactionsController@confirmTransaction');
+Route::get('get-transaction', 'Api\TransactionsController@getTransaction');
